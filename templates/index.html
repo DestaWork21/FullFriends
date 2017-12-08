@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Friends</title>
+    
+</head>
+<body>
+<div id ="FD">
+    <h1>Friends:</h1>
+<table border=1>
+	<tr>
+		<th>Name</th>
+        <th>Age</th>
+        <th>Friend Since</th>
+        <th>Year</th>
+        <th>Created_at</th>
+        <th>updated_at</th>
+		<th>Actions</th>
+	</tr>
+    {% for friend in friendsdy %}
+        
+	<tr>
+		<td>{{friend["name"]}}</td>
+        <td>{{friend["age"]}}</td>
+        <td>{{friend["friendSince"]}}</td>
+        <td>{{friend["year"]}}</td>
+        <td>{{friend["created_at"]}}</td>
+		<td>{{friend["updated_at"]}}</td>
+		<td>
+				<a href="/edit/{{friend.id}}">Edit</a> | 
+				<a href="/delete/{{friend.id}}">Delete</a>
+			</td>
+		</tr>
+	{% endfor %}
+</table>
+</div>
+<div id="add">
+<h1>Add a Friend: </h1>
+<form action="/create_friends" method="post">
+	<input type="text" name="name" placeholder="Name"><br>
+    <input type="text" name="age" placeholder="Age"><br>
+    <input type="text" name="friendSince" placeholder="Friend Since"><br>
+    <input type="text" name="year" placeholder="Year"><br>
+    <br>
+    <button class= "btn"> Submit</button>
+	
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+#FD{
+    width: 600px;
+    padding-left: 60px;
+    background:gray;
+   
+}
+
+#add{
+    width:400px;
+    padding-left: 60px;
+    background : green;
+    margin-left: 200px;
+}
+
+.btn{
+    border: 1px solid black;
+    box-shadow:10px black ;
+    font-size: 16px;
+    margin-left:100px;
+}

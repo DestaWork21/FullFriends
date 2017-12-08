@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>update Friends</title>
+    <link rel="sytlesheet" href ="static/style.css">
+</head>
+<body>
+
+<form action="/update_friends/{{friendsdy.id}}" method="post">
+    <input type="text" name="Name" value="{{friendsdy['Name']}}"><br>
+    <input type="text" name="Age" value="{{friendsdy['Age']}}"><br>
+    <input type="text" name="Friend Since" value="{{friendsdy['Friend Since']}}"><br>
+    <input type="text" name="Year" value="{{friendsdy['Year']}}"><br>
+    <input type="submit" value="Update friendsdy" a Friend">
+</form>
+
+</body>
+</html>
